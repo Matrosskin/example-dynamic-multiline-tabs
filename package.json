@@ -1,0 +1,26 @@
+{
+  "name": "example-dynamic-multiline-tabs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Matrosskin/example-dynamic-multiline-tabs.git"
+  },
+  "author": "Yevhen Irkliievskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matrosskin/example-dynamic-multiline-tabs/issues"
+  },
+  "homepage": "https://github.com/Matrosskin/example-dynamic-multiline-tabs#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}

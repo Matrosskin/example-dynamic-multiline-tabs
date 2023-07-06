@@ -1,0 +1,59 @@
+.example-inline-float .content {
+    width: 100%;
+    font-size: 0;
+    /* NOTE: padding required to center items and for correct size of item's content
+    because their sum of width and margin is not equal to width of container.
+    Only when window bigger than 784px */
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.example-inline-float .content > * {
+    font-size: initial;
+}
+
+.example-inline-float .content .item-label {
+    width: var(--item-width);
+    text-align: center;
+    display: inline-block;
+    background-color: red;
+    cursor: pointer;
+    margin-right: var(--items-gap);
+}
+
+.example-inline-float .content .item-label:nth-child(12n - 2) {
+    margin-right: 0;
+}
+
+.example-inline-float .content .item-label:nth-child(3n + 13) {
+    margin-top: var(--items-gap);
+}
+
+.example-inline-float .content .item-content {
+    display: none;
+    width: 100%;
+    background-color: green;
+}
+
+.example-inline-float .content input[type=radio] {
+    display: none;
+}
+
+.example-inline-float .content input:checked + .item-content {
+    display: block;
+    float: left;
+}
+
+@media screen and (max-width: 784px) {
+    .example-inline-float .content {
+        padding: 0;
+    }
+
+    .example-inline-float .content .item-label:nth-child(6n - 2) {
+        margin-right: 0;
+    }
+
+    .example-inline-float .content .item-label:nth-child(3n + 7) {
+        margin-top: var(--items-gap);
+    }
+}

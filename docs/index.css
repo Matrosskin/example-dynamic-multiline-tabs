@@ -1,0 +1,50 @@
+@import url("example-inline-float.css");
+@import url("example-flex.css");
+@import url("example-grid.css");
+
+:root {
+    --items-gap: 10px;
+    --item-width: 188px;
+    --item-width-with-gap: calc(var(--item-width) + var(--items-gap));
+    --total-width: calc(4 * var(--item-width) + 3 * var(--items-gap));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.example-inline-float,
+.example-flex,
+.example-grid {
+    width: 784px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 784px) {
+    :root {
+        --total-width: calc(2 * var(--item-width) + var(--items-gap));
+    }
+
+    .example-inline-float,
+    .example-flex,
+    .example-grid {
+        width: 386px;
+    }
+}
+
+@media screen and (max-width: 386px) {
+    :root {
+        --items-gap: 2px;
+        --item-width: 159px;
+    }
+
+    .example-inline-float,
+    .example-flex,
+    .example-grid {
+        width: 320px;
+    }
+}

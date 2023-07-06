@@ -1,0 +1,57 @@
+.example-flex .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--items-gap);
+    max-width: var(--total-width);
+}
+
+.example-flex input[type=radio] {
+    display: none;
+}
+
+.example-flex div:first-child label {
+    width: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.example-flex .content .fl-item {
+    flex: 0 0 var(--item-width);
+    max-width: var(--item-width); 
+    text-align: center;
+}
+.example-flex .content .fl-item div:first-child {
+    background-color: red;
+}
+.example-flex .content .fl-item div:last-child {
+    background-color: green;
+    width: var(--total-width);
+    display: none;
+}
+.example-flex .content .fl-item input[type=radio]:checked + div {
+    display: block;
+} 
+
+.example-flex .content .fl-item:nth-child(4n - 2) div:last-child {
+    margin-left: calc(-1 * var(--item-width-with-gap));
+}
+
+.example-flex .content .fl-item:nth-child(4n - 1) div:last-child {
+    margin-left: calc(-2 * var(--item-width-with-gap));
+}
+
+.example-flex .content .fl-item:nth-child(4n) div:last-child {
+    margin-left: calc(-3 * var(--item-width-with-gap));
+}
+
+@media screen and (max-width: 784px) {
+    .example-flex .content .fl-item:nth-child(odd) div:last-child {
+        margin-left: 0;
+    }
+
+    .example-flex .content .fl-item:nth-child(even) div:last-child {
+        margin-left: calc(-1 * var(--item-width-with-gap));
+    }
+}
